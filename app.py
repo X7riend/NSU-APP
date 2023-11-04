@@ -6,7 +6,6 @@
 #create cursor to interact with database
 #cursor = connection.cursor()
 
-
 class InFlightCateringService:
     def __init__(self):
         self.menu = self.loadMenuItems()
