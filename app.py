@@ -46,7 +46,7 @@ class InFlightCateringService():
         #cur.execute("SELECT id FROM Passenger where aaNumber != 0 LIMIT 1")
         #if passenger.aaNumber 
             for i, p in enumerate(self.passengers):
-            if p['id'] == passenger['id']:
+             if p['id'] == passenger['id']:
                 self.passengers[i] = passenger
 
     def processOrders(self):
