@@ -1,3 +1,12 @@
+import sqlite3
+
+#connect to sqlite database
+#connection = sqlite3.connect('databasename.db')
+
+#create cursor to interact with database
+#cursor = connection.cursor()
+
+
 class InFlightCateringService:
     def __init__(self):
         self.menu = self.loadMenuItems()
@@ -7,12 +16,17 @@ class InFlightCateringService:
     def loadMenuItems(self):
         # Skeleton code to mimic loading menu items from a database
         # Simulate a list of menu items fetched from a database query
-        menu_items_from_db = [
+        menu_items = [
             {"id": 1, "name": "Peanuts", "price": 5.0},
             {"id": 2, "name": "Chips", "price": 4.0},
             {"id": 3, "name": "Cookies", "price": 3.0},
         ]
-        return menu_items_from_db
+
+        #actual from database
+        #self.cursor.execute('SELECT * FROM menu_items')
+        #menu_items = self.cursor.fetchall()
+
+        return menu_items
 
     def setMealPreferences(self, passengerId, mealPreferences):
         passenger = self.findPassengerById(passengerId)
@@ -65,3 +79,6 @@ if __name__ == '__main__':
     # Display orders
     for passenger_id, order in service.orders.items():
         print(f"Passenger ID {passenger_id}'s order: {order['items']}")
+
+#make sure to close database connection
+#connection.close()
