@@ -7,8 +7,7 @@ class Passenger(Base):
     id = Column(Integer, primary_key=True, index=True)
     aaNumber = Column(String, index=True)
     seatNumber = Column(String)
-    drinkPrefernece = Column(String)
-    snackPreference = Column(String)
+    drinkPreference = Column(String)
     wakeUp = Column(Boolean)
 
 
@@ -17,4 +16,3 @@ class MenuItems(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String)
-    Type = Column(String)

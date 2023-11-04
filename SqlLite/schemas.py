@@ -1,18 +1,32 @@
 from pydantic import BaseModel
 
 class PassengerBase(BaseModel):
-    id:int
     aaNumber: str
     seatNumber: str
     drinkPreference: str
-    snackPrefernce: str
     wakeUp: bool
 
+class PassengerCreate(PassengerBase):
+    pass
+
+class Passenger(PassengerBase):
+    id:int
+
+    class Config:
+        orm_mode = True
 
 class MenuItemBase(BaseModel):
-
-    id: int
     name:str
-    type:str
+
+
+class MenuItemCreate(MenuItemBase):
+    pass
+
+
+class MenuItem(MenuItemBase):
+    id:int
+
+    class Config:
+        orm_mode = True
 
 
