@@ -48,7 +48,7 @@ class InFlightCateringService:
     def getAllPassengers(self):
         return self.passengers
 
-# Sample usage
+# Sample Driver
 if __name__ == '__main__':
     service = InFlightCateringService()
     # Sample passengers
