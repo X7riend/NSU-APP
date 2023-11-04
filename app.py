@@ -76,10 +76,12 @@ if __name__ == '__main__':
     service.passengers = [
         {"id": 1, "name": "John"},
         {"id": 2, "name": "Alice"},
+        {"id": 3, "name": "Joseph"},
     ]
     # Sample passenger preferences this must be retrieved from database
     service.setMealPreferences(1, [1, 2])
     service.setMealPreferences(2, [2, 3])
+    service.setMealPreferences(3, [3, 1])
     # Process orders
     service.processOrders()
 
