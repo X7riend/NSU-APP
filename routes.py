@@ -1,6 +1,5 @@
-from fastapi import FastAPI, HTTPException, Depends
-from pydantic import BaseModel
-from SqlLite import models, crud
+from fastapi import FastAPI, HTTPException
+from SqlLite import models, crud, schemas
 from SqlLite.database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
@@ -31,24 +30,24 @@ def get_passenger(passenger_id: int):
     else:
         raise HTTPException(status_code=404, detail="Passenger not found")
     
+@app.post("/passenger", response_model=schemas.Passenger)
+def add_passenger(passenger: schemas.PassengerCreate):
+    return  crud.create_passenger(db=db, passenger=passenger)
 
-#@app.post("/passenger")
-#def add_passenger():
-#   return  
 
-
-   
 
 @app.delete("/passenger/{id}")
 def delete_passenger(id: int):
   SessionLocal().query(models.Passenger).filter(models.Passenger.id == id).delete(synchronize_session=False)
 
-@app.put("/passenger/{id}")
-def update_passenger(id: int, passenger: Passenger):
-    index = next((i for i, p in enumerate(data) if p['id'] == id), None)
-    if index is None:
-        raise HTTPException(status_code=404, detail="Passenger not found")
-    if any(p['seat'] == passenger.seat and p['id'] != id for p in data):
-        raise HTTPException(status_code=400, detail="Seat already taken")
-    data[index] = passenger.dict()
-    return data
+'''@app.put("/passenger/{id}")
+def update_passenger(id: int, passenger: Passenger):'''
+
+@app.get("/menuItems/")
+def getPassengers():
+    menuList =  crud.get_menu_items(db=db)
+    return menuList
+
+@app.post("/menuItems/", response_model=schemas.MenuItem)
+def add_menuItem(menuItem: schemas.MenuItemCreate):
+    return  crud.create_menu_item(db=db, menuItem=menuItem)
