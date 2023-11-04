@@ -1,14 +1,14 @@
 #import sqlite3
 
 #connect to sqlite database
-#connection = sqlite3.connect('databasename.db')
+#connection = sqlite3.connect('.db')
 
 #create cursor to interact with database
-#cursor = connection.cursor()
+#cur = connection.cursor()
 #test2
 
 
-class InFlightCateringService:
+class InFlightCateringService():
     def __init__(self):
         self.menu = self.loadMenuItems()
         self.passengers = []
@@ -24,8 +24,8 @@ class InFlightCateringService:
         ]
 
         #actual from database
-        #self.cursor.execute('SELECT * FROM menu_items')
-        #menu_items = self.cursor.fetchall()
+        #self.cur.execute('SELECT * FROM menu_items')
+        #menu_items = self.cur.fetchall()
 
         return menu_items
 
@@ -43,7 +43,9 @@ class InFlightCateringService:
     def savePreferences(self, passenger): #if they want to create account
         # Skeleton code to mimic saving passenger preferences to a database
         # Simulate updating a passenger's preferences in the database
-        for i, p in enumerate(self.passengers):
+        #cur.execute("SELECT id FROM Passenger where aaNumber != 0 LIMIT 1")
+        #if passenger.aaNumber 
+            for i, p in enumerate(self.passengers):
             if p['id'] == passenger['id']:
                 self.passengers[i] = passenger
 
@@ -75,7 +77,7 @@ if __name__ == '__main__':
         {"id": 1, "name": "John"},
         {"id": 2, "name": "Alice"},
     ]
-    # Sample passenger preferences
+    # Sample passenger preferences this must be retrieved from database
     service.setMealPreferences(1, [1, 2])
     service.setMealPreferences(2, [2, 3])
     # Process orders
