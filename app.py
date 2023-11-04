@@ -1,4 +1,4 @@
-import sqlite3
+#import sqlite3
 
 #connect to sqlite database
 #connection = sqlite3.connect('databasename.db')
@@ -39,7 +39,7 @@ class InFlightCateringService:
         passenger_from_db = next((p for p in self.passengers if p['id'] == passengerId), None)
         return passenger_from_db
 
-    def savePreferences(self, passenger):
+    def savePreferences(self, passenger): #if they want to create account
         # Skeleton code to mimic saving passenger preferences to a database
         # Simulate updating a passenger's preferences in the database
         for i, p in enumerate(self.passengers):
@@ -61,6 +61,10 @@ class InFlightCateringService:
 
     def getAllPassengers(self):
         return self.passengers
+
+
+
+
 
 # Sample Driver
 if __name__ == '__main__':
