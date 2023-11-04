@@ -47,7 +47,7 @@ def get_menu_items(db: Session):
     ]
 
     for menu_item in menu_items:
-        create_menu_item(db, MenuItemBase(name=menu_item["name"], Type=menu_item["Type"]))
+        create_menu_item(db, MenuItemCreate(name=menu_item["name"], Type=menu_item["Type"]))
 '''
 
 def create_menu_item(db: Session, menuItem: schemas.MenuItemCreate):
