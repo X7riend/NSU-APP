@@ -51,3 +51,7 @@ def getPassengers():
 @app.post("/menuItems/", response_model=schemas.MenuItem)
 def add_menuItem(menuItem: schemas.MenuItemCreate):
     return  crud.create_menu_item(db=db, menuItem=menuItem)
+
+@app.delete("/menuItems/{id}")
+def delete_menuItem(id: int):
+  SessionLocal().query(models.MenuItems).filter(models.MenuItems.id == id).delete(synchronize_session=False)
