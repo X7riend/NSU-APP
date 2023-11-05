@@ -1,4 +1,14 @@
-class InFlightCateringService:
+#import sqlite3
+
+#connect to sqlite database
+#connection = sqlite3.connect('.db')
+
+#create cursor to interact with database
+#cur = connection.cursor()
+#test2
+
+
+class InFlightCateringService():
     def __init__(self):
         self.menu = self.loadMenuItems()
         self.passengers = []
@@ -7,12 +17,17 @@ class InFlightCateringService:
     def loadMenuItems(self):
         # Skeleton code to mimic loading menu items from a database
         # Simulate a list of menu items fetched from a database query
-        menu_items_from_db = [
+        menu_items = [
             {"id": 1, "name": "Peanuts", "price": 5.0},
             {"id": 2, "name": "Chips", "price": 4.0},
             {"id": 3, "name": "Cookies", "price": 3.0},
         ]
-        return menu_items_from_db
+
+        #actual from database
+        #self.cur.execute('SELECT * FROM menu_items')
+        #menu_items = self.cur.fetchall()
+
+        return menu_items
 
     def setMealPreferences(self, passengerId, mealPreferences):
         passenger = self.findPassengerById(passengerId)
@@ -25,11 +40,13 @@ class InFlightCateringService:
         passenger_from_db = next((p for p in self.passengers if p['id'] == passengerId), None)
         return passenger_from_db
 
-    def savePreferences(self, passenger):
+    def savePreferences(self, passenger): #if they want to create account
         # Skeleton code to mimic saving passenger preferences to a database
         # Simulate updating a passenger's preferences in the database
-        for i, p in enumerate(self.passengers):
-            if p['id'] == passenger['id']:
+        #cur.execute("SELECT id FROM Passenger where aaNumber != 0 LIMIT 1")
+        #if passenger.aaNumber 
+            for i, p in enumerate(self.passengers):
+             if p['id'] == passenger['id']:
                 self.passengers[i] = passenger
 
     def processOrders(self):
@@ -48,6 +65,10 @@ class InFlightCateringService:
     def getAllPassengers(self):
         return self.passengers
 
+
+
+
+
 # Sample Driver
 if __name__ == '__main__':
     service = InFlightCateringService()
@@ -55,13 +76,18 @@ if __name__ == '__main__':
     service.passengers = [
         {"id": 1, "name": "John"},
         {"id": 2, "name": "Alice"},
+        {"id": 3, "name": "Joseph"},
     ]
-    # Sample passenger preferences
+    # Sample passenger preferences this must be retrieved from database
     service.setMealPreferences(1, [1, 2])
     service.setMealPreferences(2, [2, 3])
+    service.setMealPreferences(3, [3, 1])
     # Process orders
     service.processOrders()
 
     # Display orders
     for passenger_id, order in service.orders.items():
         print(f"Passenger ID {passenger_id}'s order: {order['items']}")
+
+#make sure to close database connection
+#connection.close()
