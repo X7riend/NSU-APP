@@ -1,69 +1,58 @@
-# BE Smart Hack Repo Template
+# WAAke by Techno-Spartanz
 
 ## Description 🚨 
-This is a repository template containing all the information that needs to accompany your project.
+This is a repository that holds WAAke an extension of the American Airlines in flight process that allows users to indicate whether they want to be woken up or not and provide drink preferences.
 
-Feel free to use any languages or frameworks, but the following information must be filled out before hacking ends.
 ___________
-# Project Name
+# WAAke
 
 ## Challenge Statement(s) Addressed 🎯
-**...include the challenge statement(s) the project worked to address**
-
-Examples:
-* How might we decrease the United States chances of alien and monster attacks given what we know from popular alien and monster movies?
-* How might we make it possible for people in cities not to have to own a car by making car-sharing easier so that the environment will be less damaged and people can save money?
-* How might we ....
+**How might we improve the in-flight catering experience for passengers to increase customer satisfaction and optimize airline operations?**
 
 ## Project Description 🤯
-**....at lease 3 sentences describing what the project does and how it works**
+WAAke is an application that allows users to set preferences and customize their experience. Specifically, WAAke allows users to choose whether or not to be awoken during the catering service. WAAke thrives to increase customer satisfaction, flight attendants' employee experience, and optimize in flight operations.
+
 
 ## Project Value 💰
-**....at lease 3 sentences describing your target customer and tangible benefits from your solution**
+Our target customer is American Airline customers. We want them to be able to enjoy all their perks while in flight. Currently in flight experience are directly connected to catering services provided by the flight attendents. As well as satifying the customers we want to increase the operations of the airline overall. By allowing flight attendents to prepare from diet soda, service times are decreased. Also when customers chose to be woken up to recieve bevergaes they then use more supplies and reduce the food waste, while optimizing the customer experience.**
 
 
 ## Tech Overview 💻
-**... what tech was used to bring this project to life?**
 
-Example:
 * FastAPI
-* Hugging Face AI Models
-* Next.js
+* SqlAlchemy
+* FetchAPI
 
 
 ### ✨ Contributors ✨
-**...tell the world who you and your team are 🙂**
-* Team member X (AAdvantage No)
-* Team member Y (AAdvantage No)
+**Techno-Spartanz Are... 🙂**
+* Shakiya Friend (T470VT4)
+* Rodric Cox-Cooper (C5KT976)
 * Team member Z (AAdvantage No)
 
 ### School Name 🏫
-The ABC School
+Norfolk State University
 
 ### Team Name 🏷
-Coding Costars
+Techno-Spartanz
 
 ### Link to Video Pitch 📹
-**...point us to where you tell us about your solution 😄**
+**https://clipchamp.com/watch/MEjz9QqCW5s 😄**
 
 ### Link to Demo Presentation 📽
-**...point us to your PPT or Canva slides 😍**
+(https://docs.google.com/presentation/d/1ZBVEFVyXY7wnCkjsvGOfpfXTMn3F-PcTa3wFD6EgmJY/edit?usp=sharing) 😍**
 
 ### Team Checklist due before 5p Saturday 11/4 ✅
-- [ ] Team photo
-- [ ] Team Slack channel
-- [ ] Communication established with mentor
-- [ ] Repo creation from this template
-- [ ] Hangar registration
-- [ ] Scavenger Hunt submission
+- [x] Team photo
+- [x] Team Slack channel
+- [x] Communication established with mentor
+- [x] Repo creation from this template
+- [x] Hangar registration
+- [x] Scavenger Hunt submission
 
 ### Project Checklist due before 10a Sunday 11/5 🏁
 - [ ] Presentation complete and linked
-- [ ] Video pitch recorded and linked
+- [x] Video pitch recorded and linked
 - [ ] Code merged to main branch
 
-### Sample Checklist for Syntax Example 
-- [ ] Presentation complete and linked
-- [ ] Video pitch recorded and linked
-- [ ] Code merged to main branch
 
