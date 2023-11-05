@@ -1,27 +1,31 @@
-.container {
-    overflow: hidden;
+.container {   
     display: flex;
-    width: 100%;
+    max-width: 100%;
     height: 100vh; /* Full height of the viewport */
   }
   .div1 {
     background-color: #2E3A46;
     flex: 1; /* Take up 1/3 of the space */
+    min-width: 30%;
   }
   .div2 {
-    background-color: lightgray;
+    background-color: #9FA6AA;
     flex: 2; /* Take up 2/3 of the space */
     display: flex;
+    overflow: scroll;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     position: relative; /* For absolute positioning of the small rectangle */
   }
   .white-rectangle {
-    background-color: white;
-    width: 80%;
-    height: 20%;
-    margin: 50px 0;
+    background-color: #9FA6AA;
+    width: 100%;
+    height: 15%;
+    margin: 0px 0px 40px 0px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
 
   }
   .small-rectangle {
@@ -30,16 +34,73 @@
     height: 10%;
     position: absolute;
     bottom: 20px;
+    font-size: larger;
+    border-radius: 2%;
   }
 .save-preferences{
-    margin-left: 10%;
-    width: 30%;
+    background-color: rgb(61, 61, 222);
+    font-size: larger;
+    margin-top: 5%;
+    margin-left: 28%;
+    width: 50%;
     height: 50px;
+    border-style: none;
     text-align: center;
+    border-radius: 10%;
+    color: white;
 }
 .update-preferences {
+    font-size: larger;
     margin-left: 20%;
     width: 50%;
     height: 50px;
     text-align: center;
+    border-radius: 2%;
+}
+.listItem {
+    border-style: inset;
+    width: 100%;
+    height: 75px;
+    background-color: rgb(201, 201, 201);
+    margin-bottom: 10px;
+}
+.menu-item {
+    display: flex;
+    background-color: #2E3A46;
+    color: white; 
+    width: 20%; 
+    min-width: 300px;
+    height: 150px; 
+    margin: 5px;
+}
+.imgclass {
+    height: 117px;
+    width: 125px;
+}
+.counter{
+    margin-left: 15%;
+    margin-top: 7%;
+}
+.choice-btn {
+    border: none;
+    border-radius: 10%;
+    background-color: #2E3A46; /* Default background color */
+    width: 15%;
+    height: 100px;
+    color: white;
+    font-size: large;
+    cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+.choice-btn:first-child {
+    margin-left: 32%;
+}
+
+.choice-btn:not(:first-child) {
+    margin-left: 5%;
+}
+
+.choice-btn.selected {
+    background-color: #4F6D7A; /* New color for the selected button */
 }

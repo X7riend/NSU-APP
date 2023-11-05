@@ -9,8 +9,6 @@ seat = `${randomRow}${randomSeatLetter}`;
 
 document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('myForm').addEventListener('submit', function(e) {
-      const seatLabel = document.getElementById('seat');
-      seatLabel.innerHTML = seat;
       e.preventDefault(); // Stop the standard form submission
       getForm(); // Call your function to handle the form
     });

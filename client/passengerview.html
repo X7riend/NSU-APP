@@ -9,34 +9,186 @@
   
 </head>
 <body>
+   <form id="myForm">
 
 <div class="container">
   <div class="div1">
     <div style="border-style: inset;text-align: center;color: white;">
-        <h1>Order Summary</h1>
+        <h2 id="seat">Order Summary</h2>
     </div>
-    <div style="border-style: inset; height: 70%;background-color: white;" class="orderList">
-        <ul>
-            <li>Item1</li>
-            <li>Item2</li>
-            <li>Item3</li>
-            <li>Item4</li>
+    <div style="border-style: inset; height: 65%;background-color: white; margin: 0px; overflow: scroll;" class="orderList">
+        <ul id="drinkList" style="list-style-type: none; padding-left: 0%;overflow: hidden;">
         </ul>
     </div><br>
     <div>
-        <button class="save-preferences"></button>
-        <button class="save-preferences"></button>
+        <h3 style="color: white; margin: 2%;margin-left: 10%; text-align: center;">Would you like to save your preferences for future flights?</h3>
+        <button class="save-preferences">Yes</button>
     </div><br>
-    <button class="update-preferences">
-
-    </button>
   </div>
   <div class="div2">
-    <div class="white-rectangle"></div>
-    <div class="white-rectangle"></div>
-    <input type="submit" class="small-rectangle"></input>
+    <h1 style ="color: white;">Never Miss Your Beverages!</h1>
+
+    <h3 style="color: white;">Would You Like to be Awaken?</h3>
+    <div class="white-rectangle">
+        <button class="choice-btn"data-wakeup="yes">Yes</button>
+        <button class="choice-btn"data-wakeup="no">No</button>
+        <input type="hidden" id="wakeupPreference" name="wakeupPreference" value="">
+<!-- 
+        <input type="radio" id="wakeupYes" name="wakeupPreference" class="choice-radio" value="yes" hidden>
+        <label for="wakeupYes" class="choice-btn">Yes</label>
+        
+        <input type="radio" id="wakeupNo" name="wakeupPreference" class="choice-radio" value="no" hidden>
+        <label for="wakeupNo" class="choice-btn">No</label> -->
+
+    </div>
+    <h3 style ="color: white; ">Beverages</h3>
+    <div id="beveragesList" class="white-rectangle">
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Aha Lime</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Sprite</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Coke</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Diet Coke</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Water</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Ginger Ale</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Dr. Pepper</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Diet Dr. Pepper</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Bigelow Tea</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Orange Juice</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+    </div>
+    <h3 style ="color: white; ">Spirits</h3>
+    <div id="beveragesList" class="white-rectangle">
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Beer</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Wine</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Bourbon</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Tequila</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img class="imgclass" src="client/assets/ahaLimewatermelon.jpg">
+            <h3 style="margin-left: 5%; margin-top: 10%;">Whiskey</h3>
+            <div class="counter">
+                <button class="increment">+</button><br><br>
+                <span class="label" style="margin-left: 37%;">0</span><br><br>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        
+    </div>
+    <input type="submit" value="Submit Preferences" class="small-rectangle"></input>
   </div>
 </div>
-
+</form> 
+<script src="passenger.js"></script>
+<script>const seatLabel = document.getElementById('seat');
+    seatLabel.innerHTML = "Order Summary: " + seat;</script>
 </body>
 </html>
