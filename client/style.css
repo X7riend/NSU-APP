@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    background-color: aliceblue;
+}
+h1{
+    font-weight: bold;
+}
+form {
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    width: 25%;
+}
