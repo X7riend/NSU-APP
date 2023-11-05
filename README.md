@@ -52,3 +52,7 @@ Techno-Spartanz
 - [x] Hangar registration
 - [x] Scavenger Hunt submission
 
+### Project Checklist due before 10a Sunday 11/5 🏁
+- [x] Presentation complete and linked
+- [x ] Video pitch recorded and linked
+- [x ] Code merged to main branch
